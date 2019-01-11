@@ -6,7 +6,7 @@ Overall model: GAN + RL
 Generator: CNN + LSTM
 Discriminator: DNN
 
-![Blank Diagram](C:\Users\龙泉羽\Desktop\Blank Diagram.png)
+![Blank Diagram](https://github.com/sjtu-cs222/Group_43/blob/master/Report/gan.png)
 
 #### Data
 
