@@ -47,13 +47,13 @@
 \newdimen\blindfoliodrop
 \newbox\tempbox
 %%
-\def\acmVolume#1{\def\@acmVolume{#1}}
-\def\acmNumber#1{\def\@acmNumber{#1}}
-\def\acmYear#1{\def\@acmYear{#1}}
-\def\acmMonth#1{\def\@acmMonth{#1}}
-\def\acmdoi#1{\def\@acmDOI{#1}}
-\def\@journalName{ACM Transactions on Graphics}
-\def\@permissionCodeOne{0730-0301}
+\def\acmVolume#1{\def\@acmVolume{}}
+\def\acmNumber#1{\def\@acmNumber{}}
+\def\acmYear#1{\def\@acmYear{}}
+\def\acmMonth#1{\def\@acmMonth{}}
+\def\acmdoi#1{\def\@acmDOI{}}
+\def\@journalName{}
+\def\@permissionCodeOne{}
 %
 
 \gdef\doiline{{\tt DOI:}http://dx.doi.org/\@acmDOI} % Gerry - March 2012
@@ -720,7 +720,7 @@ to\hsize{\if@nfeven\else\hfil\fi\box\@tempboxa\if@nfeven\hfil\fi}
 %
 \def\@maketitle{\newpage \thispagestyle{titlepage}\par
  \begingroup \lineskip = \z@\null \vskip -7pt\relax %-24.5pt
- \parindent\z@ \LARGE {\raggedright \hyphenpenalty\@M
+ \parindent\z@ \LARGE {\center \hyphenpenalty\@M
   {\titlefont \@title} \par
  \global\firstfoot %aiellom
  \global\runningfoot %aiellom
@@ -728,6 +728,7 @@ to\hsize{\if@nfeven\else\hfil\fi\box\@tempboxa\if@nfeven\hfil\fi}
 \label{@firstpg}
 { \vskip 13.5pt\relax \fontsize{10}{12}\selectfont \sf %vskip 13.5pt between title and author
  \begingroup \addtolength{\baselineskip}{2pt}
+ \center
  \@author\par \vskip -2pt 
  \endgroup }
  \vskip 23pt\relax
@@ -811,9 +812,9 @@ permissions@acm.org.\par
 %
 \def\acmArticleNum#1{\def\@acmArticleNum{#1}}
 \def\@runningfoot{}
-\def\runningfoot{\def\@runningfoot{\@journalName, Vol.\ \@acmVolume, No.\ \@acmNumber, Article\ \@acmArticleNum, Publication date:\ \@acmMonth\ \@acmYear.}}
+\def\runningfoot{\def\@runningfoot{}}
 \def\@firstfoot{}
-\def\firstfoot{\def\@firstfoot{\@journalName, Vol.\ \@acmVolume, No.\ \@acmNumber, Article\ \@acmArticleNum, Publication date:\ \@acmMonth\ \@acmYear.}}
+\def\firstfoot{\def\@firstfoot{}}
 \def\ps@titlepage{\let\@mkboth\@gobbletwo
 \def\@oddhead{}\def\@oddfoot{\hbox{}\hfill
 \scriptsize\@firstfoot}\def\@evenhead{}\def\@evenfoot{\scriptsize\@firstfoot\hfill\hbox{}}}
